@@ -6,13 +6,17 @@
 <form method="post">
     {% csrf_token %}
 
-{{que}} <input type="text" name="answ"method="post"><br>
-<h1>User input:{{ans}}</h1><br>
+{{que}} <input type="text" name="answ"><br>
+
+{% if ans %}
+
 <h1>answer:{{answer}}</h1>
+
+{% endif %}
 
 
 <input type="submit" value="submit" name="submit"><br><br>
-<h1>congratulation your score is:{{score}}</h1>
+
 </form>
 
 {% endblock %}
