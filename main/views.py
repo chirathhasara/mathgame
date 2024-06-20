@@ -21,13 +21,13 @@ def math(request):
     user_answer = request.POST.get('sol')
 
     if (user_answer == ans and user_answer!=None and ans!=None):
-        expre='Correct'
+        expre='Correct-'
         score += 1
     elif(user_answer==None and ans==None):
         score
         expre=''
     else:
-        expre='wrong'
+        expre='wrong-'
         score
 
     return render(request, 'main/home.html', {'que': question , 'score': score, 'prev_ans': answer,'exp':expre})

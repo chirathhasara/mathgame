@@ -1,20 +1,21 @@
 {% extends "main/base.html" %}
 
 {% block content %}
-
-
+<br><br>
+<center>
+    <h1><font type="sans-serif" color="#007bff">Infinite Math Problem Generator For Kids</font></h1>
 <form method="post">
     
     {% csrf_token %}
 
-<h1>{{que}}</h1><br><input type="text" name="answ"><br>
+<h1><font color='red'>{{que}}</font></h1><br><input type="text" name="answ"><br><br>
 
 <input type="hidden" name="sol" value="{{ prev_ans }}">
-<input type="submit" value="submit" name="submit"><br><br>
+<button type="submit" class="styled-button">Submit</button><br>
 
 
 
 </form>
-<h1>{{exp}}-your score is:{{score}}</h1>
-
+<h1><font color="#ffd700">{{exp}}your score is:{{score}}</font></h1>
+</center>
 {% endblock %}
