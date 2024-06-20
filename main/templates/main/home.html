@@ -4,19 +4,17 @@
 
 
 <form method="post">
+    
     {% csrf_token %}
 
-{{que}} <input type="text" name="answ"><br>
+<h1>{{que}}</h1><br><input type="text" name="answ"><br>
 
-
-<h1>answer:{{answer}}</h1>
-<h1>user input:{{ans}}</h1>
-
-
-
-
+<input type="hidden" name="sol" value="{{ prev_ans }}">
 <input type="submit" value="submit" name="submit"><br><br>
 
+
+
 </form>
+<h1>{{exp}}-your score is:{{score}}</h1>
 
 {% endblock %}
